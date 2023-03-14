@@ -17,7 +17,8 @@ RUN pip install --editable .
 ENV RABBIT_HOST=localhost \
 	RABBIT_PORT=5672 \
 	RABBIT_LOGIN=guest \
-	RABBIT_PASSWORD=guest
+	RABBIT_PASSWORD=guest \
+	SLEEP_TIMEOUT_SECONDS=60
 
 CMD ["python", "meter"]
 
