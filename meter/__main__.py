@@ -3,13 +3,17 @@ import logging
 import random
 from asyncio import AbstractEventLoop
 
-from meter.message_bus.publisher import RabbitClient
+from meter.rabbit import RabbitClient
 from meter.settings import settings
 
 EXCHANGE_NAME = "METER"
 ROUTING_KEY = "meter_value"
 
 logging.basicConfig(format="%(asctime)s:%(levelname)s:%(name)s:%(lineno)s:%(message)s", level=logging.DEBUG)
+
+logging.getLogger("aiormq").setLevel(logging.WARNING)
+logging.getLogger("aio_pika").setLevel(logging.WARNING)
+logging.getLogger("asyncio").setLevel(logging.WARNING)
 
 logger = logging.getLogger("meter")
 

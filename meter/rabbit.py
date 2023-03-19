@@ -7,11 +7,7 @@ import aio_pika
 from aio_pika import connect_robust, ExchangeType
 from aio_pika.abc import AbstractChannel, AbstractRobustConnection
 
-logger = logging.getLogger("meter.message_bus.publisher")
-
-logging.getLogger("aiormq").setLevel(logging.WARNING)
-logging.getLogger("aio_pika").setLevel(logging.WARNING)
-logging.getLogger("asyncio").setLevel(logging.WARNING)
+logger = logging.getLogger("meter.rabbit")
 
 
 class RabbitClient:
