@@ -10,13 +10,15 @@ Requires running rabbitmq. Host, port, login, password can be configured
 via environment variables.
 
 ### Installation
-`git clone git@github.com:RandyRomero/meter.git`
+```
+git clone git@github.com:RandyRomero/meter.git
 
-`cd meter`
+cd meter
 
-`poetry shell`
+poetry shell
 
-`poetry install`
+poetry install
+```
 
 ### Formatting and CI
 
